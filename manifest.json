@@ -1,10 +1,10 @@
 {
-  "id": "/CureProof-/",
+  "id": "/cureproof-/",
   "name": "CureProof - Real-Time Concrete Curing Monitor",
   "short_name": "CureProof",
   "description": "Prevent premature concrete cracking with daily QR-verified water curing logs, GPS geofencing, and photo proof.",
-  "start_url": "/CureProof-/",
-  "scope": "/CureProof-/",
+  "start_url": "/cureproof-/",
+  "scope": "/cureproof-/",
   "display": "standalone",
   "display_override": [
     "window-controls-overlay",
