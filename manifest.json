@@ -1,0 +1,186 @@
+{
+  "id": "/cureproof/",
+  "name": "CureProof - Real-Time Concrete Curing Monitor",
+  "short_name": "CureProof",
+  "description": "Prevent premature concrete cracking with daily QR-verified water curing logs, GPS geofencing, and photo proof.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "tabbed",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait",
+  "background_color": "#0B0A09",
+  "theme_color": "#0B0A09",
+  "lang": "en",
+  "dir": "ltr",
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+  "categories": [
+    "productivity",
+    "business",
+    "utilities"
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=io.github.paroparogyn.cureproof",
+      "id": "io.github.paroparogyn.cureproof"
+    }
+  ],
+  "scope_extensions": [
+    {
+      "origin": "https://paroparogyn.github.io"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": [
+      "navigate-existing",
+      "auto"
+    ]
+  },
+  "edge_side_panel": {
+    "preferred_width": 390
+  },
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "CureProof Mobile Curing Dashboard & QR Scanner"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "CureProof Site Engineer Compliance & Analytics Suite"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Scan QR & Log Curing",
+      "short_name": "Scan QR",
+      "description": "Open the 2-step QR scanner and wet concrete camera",
+      "url": "./?action=scan",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Active Pours List",
+      "short_name": "Pours",
+      "description": "View all concrete pours and daily curing schedules",
+      "url": "./?action=pours",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Site Analytics & ROI",
+      "short_name": "Analytics",
+      "description": "View 7-day compliance trends and B2B ROI calculator",
+      "url": "./?action=analytics",
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "./?action=import",
+      "accept": {
+        "application/json": [
+          ".json"
+        ],
+        "text/csv": [
+          ".csv"
+        ]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+cureproof",
+      "url": "./?qr=%s"
+    }
+  ],
+  "share_target": {
+    "action": "./?action=share-target",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "widgets": [
+    {
+      "name": "CureProof Daily Curing Status",
+      "short_name": "CureProof",
+      "description": "Quick view of today's concrete water curing compliance.",
+      "tag": "cureproof-status",
+      "ms_ac_template": "./manifest.json",
+      "data": "./manifest.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "./icon-512.png",
+          "sizes": "512x512",
+          "label": "CureProof Curing Widget"
+        }
+      ],
+      "icons": [
+        {
+          "src": "./icon-192.png",
+          "sizes": "192x192"
+        }
+      ],
+      "auth": false,
+      "update": 3600
+    }
+  ]
+}
